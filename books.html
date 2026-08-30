@@ -4,20 +4,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Books — 3BL™ Media Hub</title>
-  <style>
-    /* Include your full shared CSS here (same as Home) */
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <script src="scripts/menu.js"></script>
 </head>
 
 <body>
 
-  <!-- NAVIGATION (same on every page) -->
-  <!-- Insert shared nav here -->
+  <!-- NAVIGATION -->
+  <div class="nav">
+    <img src="images/YOUR-3BL-LOGO.png" class="nav-logo" alt="3BL Logo">
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="books.html">Books</a>
+      <a href="mastermind.html">Mastermind</a>
+      <a href="collective.html">Leadership Collective</a>
+      <a href="podcast.html">Podcast</a>
+      <a href="join.html">Join</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+  </div>
+
+  <!-- MOBILE MENU -->
+  <div id="mobileMenu" class="mobile-menu">
+    <a href="index.html" onclick="toggleMenu()">Home</a>
+    <a href="books.html" onclick="toggleMenu()">Books</a>
+    <a href="mastermind.html" onclick="toggleMenu()">Mastermind</a>
+    <a href="collective.html" onclick="toggleMenu()">Leadership Collective</a>
+    <a href="podcast.html" onclick="toggleMenu()">Podcast</a>
+    <a href="join.html" onclick="toggleMenu()">Join</a>
+  </div>
 
   <!-- HERO -->
   <div class="hero">
     <h1>Building Better Business Leaders</h1>
-    <p>Real‑world leadership insight forged through decades of experience.</p>
+    <p>Leadership insight forged through decades of real‑world experience.</p>
   </div>
 
   <!-- BOOK 1 -->
@@ -26,7 +46,7 @@
     <p class="subtext">How smart leaders build stronger teams and organizations.</p>
 
     <div class="card">
-      <img src="BOOK1-COVER.png" class="book-cover">
+      <img src="images/BOOK1-COVER.png" class="book-cover">
       <p>Written by five seasoned executives from the No‑Name Mastermind Group.</p>
       <a class="cta" href="https://www.amazon.com/Becoming-Better-Business-Leaders-Organizations/dp/1957328576">Buy on Amazon</a>
     </div>
@@ -39,7 +59,7 @@
 
     <div class="card">
       <p>Deeper frameworks. Richer stories. Actionable strategies for modern leaders.</p>
-      <a class="cta" href="/join.html">Get Early Access</a>
+      <a class="cta" href="join.html">Get Early Access</a>
     </div>
   </section>
 
@@ -47,4 +67,3 @@
 
 </body>
 </html>
-

@@ -4,14 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Leadership Collective — 3BL™ Media Hub</title>
-  <style>
-    /* Shared CSS */
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <script src="scripts/menu.js"></script>
 </head>
 
 <body>
 
   <!-- NAVIGATION -->
+  <div class="nav">
+    <img src="images/YOUR-3BL-LOGO.png" class="nav-logo" alt="3BL Logo">
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="books.html">Books</a>
+      <a href="mastermind.html">Mastermind</a>
+      <a href="collective.html">Leadership Collective</a>
+      <a href="podcast.html">Podcast</a>
+      <a href="join.html">Join</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+  </div>
+
+  <!-- MOBILE MENU -->
+  <div id="mobileMenu" class="mobile-menu">
+    <a href="index.html" onclick="toggleMenu()">Home</a>
+    <a href="books.html" onclick="toggleMenu()">Books</a>
+    <a href="mastermind.html" onclick="toggleMenu()">Mastermind</a>
+    <a href="collective.html" onclick="toggleMenu()">Leadership Collective</a>
+    <a href="podcast.html" onclick="toggleMenu()">Podcast</a>
+    <a href="join.html" onclick="toggleMenu()">Join</a>
+  </div>
 
   <!-- HERO -->
   <div class="hero">
@@ -43,13 +64,13 @@
       <div class="card">
         <div class="headshot"></div>
         <h3>Robert Grossman</h3>
-        <p>Business leader specializing in operational excellence.</p>
+        <p>Operational excellence and organizational culture expert.</p>
       </div>
 
       <div class="card">
         <div class="headshot"></div>
         <h3>Ski Swiatkowski</h3>
-        <p>Executive known for scaling high‑performance teams.</p>
+        <p>Leader known for scaling high‑performance teams.</p>
       </div>
 
     </div>
@@ -59,4 +80,3 @@
 
 </body>
 </html>
-
