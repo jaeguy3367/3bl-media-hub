@@ -2,6 +2,16 @@
    3BL™ Media Hub — Master Stylesheet
    ===================================================== */
 
+:root {
+  --primary-blue: #0052A3;
+  --accent-gold: #D4A574;
+  --accent-green: #2D5016;
+  --dark-text: #1a1a1a;
+  --light-text: #ffffff;
+  --light-bg: #f8f7f5;
+  --card-bg: #ffffff;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,10 +19,10 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+  font-family: 'Georgia', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', serif;
   line-height: 1.6;
-  color: #333;
-  background: #f9fafb;
+  color: var(--dark-text);
+  background: var(--light-bg);
 }
 
 /* =====================================================
@@ -20,11 +30,12 @@ body {
    ===================================================== */
 
 nav {
-  background: #ffffff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  background: var(--light-bg);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: 100;
+  border-bottom: 3px solid var(--primary-blue);
 }
 
 nav .container {
@@ -33,20 +44,26 @@ nav .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 0.75rem 2rem;
 }
 
 nav .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #1f2937;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   text-decoration: none;
-  letter-spacing: -0.5px;
+  font-weight: bold;
 }
 
-nav .logo .tm {
-  font-size: 0.75rem;
-  vertical-align: super;
+nav .logo img {
+  height: 50px;
+  width: auto;
+}
+
+nav .logo-text {
+  color: var(--primary-blue);
+  font-size: 0.9rem;
+  font-weight: 600;
 }
 
 nav ul {
@@ -58,20 +75,21 @@ nav ul {
 
 nav a {
   text-decoration: none;
-  color: #4b5563;
+  color: var(--dark-text);
   font-weight: 500;
   font-size: 0.95rem;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid transparent;
 }
 
 nav a:hover {
-  color: #1f2937;
+  color: var(--primary-blue);
 }
 
 nav a.active {
-  color: #2563eb;
-  border-bottom: 2px solid #2563eb;
-  padding-bottom: 0.25rem;
+  color: var(--primary-blue);
+  border-bottom: 2px solid var(--primary-blue);
 }
 
 /* =====================================================
@@ -79,7 +97,7 @@ nav a.active {
    ===================================================== */
 
 .hero {
-  background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-green) 100%);
   color: white;
   text-align: center;
   padding: 6rem 2rem;
@@ -128,12 +146,12 @@ section {
 section h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: #1f2937;
+  color: var(--primary-blue);
 }
 
 section .subtext {
   font-size: 1.1rem;
-  color: #6b7280;
+  color: var(--accent-green);
   margin-bottom: 2rem;
 }
 
@@ -142,22 +160,23 @@ section .subtext {
    ===================================================== */
 
 .card {
-  background: white;
+  background: var(--card-bg);
   border-radius: 12px;
   padding: 2rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 12px rgba(0, 82, 163, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   margin-bottom: 2rem;
+  border-top: 4px solid var(--accent-gold);
 }
 
 .card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 8px 20px rgba(0, 82, 163, 0.15);
 }
 
 .card p {
   margin-bottom: 1.5rem;
-  color: #4b5563;
+  color: var(--dark-text);
   line-height: 1.8;
 }
 
@@ -175,7 +194,7 @@ section .subtext {
 .card.feature h3 {
   font-size: 1.5rem;
   margin: 1rem 0;
-  color: #1f2937;
+  color: var(--primary-blue);
 }
 
 .card.feature .icon {
@@ -222,7 +241,7 @@ section .subtext {
 
 .cta {
   display: inline-block;
-  background: #2563eb;
+  background: var(--primary-blue);
   color: white;
   padding: 0.75rem 2rem;
   border-radius: 8px;
@@ -233,16 +252,17 @@ section .subtext {
 }
 
 .cta:hover {
-  background: #1d4ed8;
+  background: var(--accent-green);
   transform: scale(1.05);
 }
 
 .cta.secondary {
-  background: #6b7280;
+  background: var(--accent-gold);
+  color: var(--dark-text);
 }
 
 .cta.secondary:hover {
-  background: #4b5563;
+  background: #C49060;
 }
 
 /* =====================================================
@@ -250,12 +270,12 @@ section .subtext {
    ===================================================== */
 
 footer {
-  background: #1f2937;
+  background: var(--primary-blue);
   color: white;
   text-align: center;
   padding: 3rem 2rem;
   margin-top: 4rem;
-  border-top: 1px solid #374151;
+  border-top: 1px solid var(--accent-gold);
 }
 
 footer p {
@@ -277,15 +297,15 @@ footer a:hover {
    ===================================================== */
 
 .highlight {
-  background: linear-gradient(to right, #dbeafe, #f0f9ff);
-  border-left: 4px solid #2563eb;
+  background: linear-gradient(to right, #E8F2FF, #F0F5F8);
+  border-left: 4px solid var(--primary-blue);
   padding: 1.5rem;
   border-radius: 8px;
   margin: 2rem 0;
 }
 
 .highlight h3 {
-  color: #1e40af;
+  color: var(--primary-blue);
   margin-bottom: 0.5rem;
 }
 
