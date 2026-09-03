@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Books — 3BL™ Media Hub</title>
-  <style>
-    /* Include your full shared CSS here (same as Home) */
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- NAVIGATION (same on every page) -->
-  <!-- Insert shared nav here -->
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="container">
+      <a href="/" class="logo">3BL<span class="tm">™</span> Media Hub</a>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="mastermind.html">Mastermind</a></li>
+        <li><a href="books.html" class="active">Books</a></li>
+        <li><a href="podcast.html">Podcast</a></li>
+        <li><a href="collective.html">Our Team</a></li>
+      </ul>
+    </div>
+  </nav>
 
   <!-- HERO -->
   <div class="hero">
@@ -21,30 +31,63 @@
   </div>
 
   <!-- BOOK 1 -->
-  <section>
+  <section class="container">
     <h2>Book 1: Becoming Better Business Leaders</h2>
     <p class="subtext">How smart leaders build stronger teams and organizations.</p>
 
     <div class="card">
-      <img src="BOOK1-COVER.png" class="book-cover">
-      <p>Written by five seasoned executives from the No‑Name Mastermind Group.</p>
-      <a class="cta" href="https://www.amazon.com/Becoming-Better-Business-Leaders-Organizations/dp/1957328576">Buy on Amazon</a>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center;">
+        <div>
+          <img src="images/BOOK1-COVER.png" alt="Becoming Better Business Leaders" class="book-cover">
+        </div>
+        <div>
+          <p>Written by five seasoned executives from the No‑Name Mastermind Group.</p>
+          <p><strong>In this book, you'll discover:</strong></p>
+          <ul style="margin-left: 1.5rem; margin-bottom: 1rem;">
+            <li>Proven frameworks for building high-performance teams</li>
+            <li>Strategies for navigating organizational challenges</li>
+            <li>Real-world case studies from industry leaders</li>
+            <li>Actionable insights you can implement immediately</li>
+          </ul>
+          <p><strong>Perfect for:</strong> Leaders, entrepreneurs, executives, and anyone committed to growing themselves and their organizations.</p>
+          <a class="cta" href="https://www.amazon.com/Becoming-Better-Business-Leaders-Organizations/dp/1957328576" target="_blank">Buy on Amazon</a>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- BOOK 2 -->
-  <section>
+  <section class="container">
     <h2>Book 2: Coming Soon</h2>
     <p class="subtext">The next evolution in the 3BL™ leadership philosophy.</p>
 
     <div class="card">
-      <p>Deeper frameworks. Richer stories. Actionable strategies for modern leaders.</p>
-      <a class="cta" href="/join.html">Get Early Access</a>
+      <p>Deeper frameworks. Richer stories. Actionable strategies for modern leaders navigating today's complex business landscape.</p>
+      <p>Building on the success of our first book, Book 2 will dive deeper into advanced leadership strategies, organizational transformation, and creating lasting impact in your industry.</p>
+      <div class="highlight">
+        <h3>What to Expect</h3>
+        <ul style="margin-left: 1.5rem;">
+          <li>Advanced frameworks for scaling organizations</li>
+          <li>Deep-dive case studies from global leaders</li>
+          <li>Strategies for navigating industry disruption</li>
+          <li>Tools for building and maintaining high-performance cultures</li>
+        </ul>
+      </div>
+      <a class="cta" href="#early-access">Get Early Access</a>
     </div>
+  </section>
+
+  <!-- CALL TO ACTION -->
+  <section class="container text-center">
+    <h2>Expand Your Leadership Library</h2>
+    <p class="subtext">Join thousands of leaders who are transforming their organizations with 3BL™ frameworks and insights.</p>
+    <a href="mastermind.html" class="cta">Join Our Mastermind</a>
+    <a href="podcast.html" class="cta secondary" style="margin-left: 1rem;">Listen to Our Podcast</a>
   </section>
 
   <footer>© 2026 3BL™ Media Hub</footer>
 
 </body>
+
 </html>
 
